@@ -1,4 +1,4 @@
-# 大肥鱼桌宠
+# deepseek——大肥鱼桌宠
 
 一只抱着电脑办公、会甩尾和庆祝的蓝发鲸鱼女仆。独立运行，支持 Windows 与 Mac，不需要安装 ChatGPT，也不需要 API Key。
 
