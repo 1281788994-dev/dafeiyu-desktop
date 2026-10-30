@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>大肥鱼桌宠</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="stage" aria-label="大肥鱼桌宠">
+    <canvas id="pet" width="192" height="208" tabindex="0" role="button" aria-label="大肥鱼，拖动移动，双击庆祝，按空格甩尾，按回车庆祝"></canvas>
+    <div id="bubble" role="status" aria-live="polite" hidden></div>
+    <div id="toolbar" aria-label="宠物操作">
+      <button id="tail" title="甩尾巴（空格）" aria-label="甩尾巴"><img src="assets/heads/tail.png" alt=""></button>
+      <button id="celebrate" title="抛、跳、接（回车 / 双击）" aria-label="抛跳接"><img src="assets/heads/celebrate.png" alt=""></button>
+      <button id="stretch" title="打哈欠，伸个懒腰" aria-label="伸懒腰"><img src="assets/heads/stretch.png" alt=""></button>
+      <button id="sleep" title="抱电脑打个盹" aria-label="打盹"><img src="assets/heads/sleep.png" alt=""></button>
+      <button id="stand" title="抱着电脑站起跳" aria-label="站起跳"><img src="assets/heads/stand.png" alt=""></button>
+      <button id="gag" title="电脑摔坏了！赶紧修" aria-label="摔坏电脑再修好"><img src="assets/heads/gag.png" alt=""></button>
+      <button id="menu" title="设置与退出（右键）" aria-label="打开设置和退出菜单"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
+    </div>
+    <div id="timer" hidden aria-label="专注剩余时间"></div>
+  </main>
+  <script src="animation.js"></script><script src="renderer.js"></script>
+</body>
+</html>

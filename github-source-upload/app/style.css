@@ -1,0 +1,19 @@
+:root { color-scheme: light dark; --ink:#eff6ff; --panel:rgba(23,35,62,.94); --line:rgba(180,205,255,.24); }
+* { box-sizing:border-box; }
+html, body { width:100%; height:100%; margin:0; overflow:hidden; background:transparent; }
+body { user-select:none; font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif; }
+#stage { position:relative; width:100%; height:100%; }
+#pet { display:block; position:absolute; top:120px; left:50%; transform:translateX(-50%); width:100%; height:calc(100% - 216px); outline:none; cursor:grab; touch-action:none; }
+#pet:active { cursor:grabbing; }
+#pet:focus-visible { outline:2px solid #79b5ff; outline-offset:-6px; border-radius:24px; }
+#toolbar { height:96px; width:186px; padding:3px; display:flex; flex-wrap:wrap; justify-content:center; align-content:center; position:absolute; bottom:0; left:50%; transform:translateX(-50%); background:var(--panel); border:1px solid var(--line); border-radius:24px; opacity:0; transition:opacity 180ms ease; }
+body.over #toolbar, #toolbar:focus-within, body.show-controls #toolbar { opacity:1; }
+button { width:44px; height:44px; flex:0 0 44px; border:0; border-radius:16px; background:none; color:var(--ink); cursor:pointer; padding:3px; display:flex; align-items:center; justify-content:center; }
+button img { width:38px; height:38px; object-fit:contain; pointer-events:none; }
+button:hover { background:#35517d; }
+button:focus-visible { outline:2px solid #a8d4ff; outline-offset:-3px; }
+svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+#bubble { position:absolute; bottom:calc(100% - 108px); left:8px; right:8px; max-height:108px; overflow:hidden; padding:8px 10px; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-radius:14px; font-size:12px; line-height:1.5; pointer-events:none; }
+#timer { position:absolute; bottom:100px; left:50%; transform:translateX(-50%); border-radius:12px; background:var(--panel); padding:3px 8px; color:var(--ink); font-size:11px; font-variant-numeric:tabular-nums; pointer-events:none; }
+[hidden] { display:none !important; }
+@media(prefers-reduced-motion:reduce) { #toolbar { transition:none; } }

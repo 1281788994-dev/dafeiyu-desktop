@@ -1,0 +1,12 @@
+大肥鱼桌宠
+
+角色：用户提供参考图的蓝发鲸鱼女仆“大肥鱼”。
+本程序使用当前聊天中生成并由用户确认的二创动画素材。
+参考来源：https://github.com/1190fasheqi/dafeiyu-pet
+这是社区二创桌宠，不代表或从属于 DeepSeek、Apple 或 OpenAI。
+
+运行组件：Electron 45.1.0，https://www.electronjs.org/
+Electron 及其 Chromium / Node.js 等组件的许可随各平台发行包提供，
+请保留 LICENSE、LICENSES.chromium.html、LICENSE.electron.txt（如有）等文件。
+
+本项目程序代码采用 MIT License；角色素材不因程序代码的 MIT 授权而改变其原有权利归属。

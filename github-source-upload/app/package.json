@@ -1,0 +1,8 @@
+{
+  "name": "dafeiyu-desktop",
+  "productName": "大肥鱼桌宠",
+  "version": "1.1.2",
+  "private": true,
+  "description": "会办公、甩尾和庆祝的大肥鱼独立桌宠",
+  "main": "main.js"
+}
