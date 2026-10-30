@@ -1,0 +1,41 @@
+name: Build desktop downloads
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: github-source-upload
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download verified Electron runtimes
+        run: |
+          mkdir -p .runtime-cache
+          cd .runtime-cache
+          base=https://github.com/electron/electron/releases/download/v45.1.0
+          curl --fail --location --retry 3 -o SHASUMS256.txt "$base/SHASUMS256.txt"
+          for target in darwin-arm64 darwin-x64 win32-x64; do
+            curl --fail --location --retry 3 -O "$base/electron-v45.1.0-$target.zip"
+          done
+      - name: Check animation behavior
+        run: node --test tests/animation.test.js tests/renderer.test.js
+      - name: Build all three distributions
+        run: python3 scripts/package.py --target all
+      - name: Publish v1.1.2 downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir release-assets
+          cp dist/*Windows*x64*v1.1.2.zip release-assets/Dafeiyu-Windows-x64-v1.1.2.zip
+          cp dist/*Mac*Apple*v1.1.2.zip release-assets/Dafeiyu-Mac-AppleSilicon-v1.1.2.zip
+          cp dist/*Mac*Intel*v1.1.2.zip release-assets/Dafeiyu-Mac-Intel-v1.1.2.zip
+          if ! gh release view v1.1.2 >/dev/null 2>&1; then
+            gh release create v1.1.2 --draft --target "${{ github.sha }}" --title "大肥鱼桌宠 v1.1.2" --notes "独立桌宠，六种动作、气泡与专注计时。下载对应系统 ZIP，完整解压后运行。AppleSilicon 为 Apple 芯片 Mac，Intel 为 Intel Mac。测试版：仅 Apple 芯片 Mac 已实机启动验证；无正式签名或 Apple 公证。说明与动作图：https://github.com/1281788994-dev/dafeiyu-desktop#readme"
+          fi
+          gh release upload v1.1.2 release-assets/*.zip --clobber
+          gh release edit v1.1.2 --draft=false --latest
