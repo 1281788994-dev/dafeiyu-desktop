@@ -8,9 +8,9 @@
 
 | 电脑 | 下载文件 | 运行方式 |
 | --- | --- | --- |
-| Windows 10 / 11，64 位 | 大肥鱼桌宠-Windows-x64-v1.1.2.zip | 完整解压，运行大肥鱼桌宠.exe，保留旁边运行文件 |
-| Mac，Apple 芯片 | 大肥鱼桌宠-Mac-Apple芯片-v1.1.2.zip | 解压，把 App 拖进应用程序后打开 |
-| Mac，Intel 芯片 | 大肥鱼桌宠-Mac-Intel-v1.1.2.zip | 解压，把 App 拖进应用程序后打开 |
+| Windows 10 / 11，64 位 | [Dafeiyu-Windows-x64-v1.1.2.zip](https://github.com/1281788994-dev/dafeiyu-desktop/releases/download/v1.1.2/Dafeiyu-Windows-x64-v1.1.2.zip) | 完整解压，运行大肥鱼桌宠.exe，保留旁边运行文件 |
+| Mac，Apple 芯片 | [Dafeiyu-Mac-AppleSilicon-v1.1.2.zip](https://github.com/1281788994-dev/dafeiyu-desktop/releases/download/v1.1.2/Dafeiyu-Mac-AppleSilicon-v1.1.2.zip) | 解压，把 App 拖进应用程序后打开 |
+| Mac，Intel 芯片 | [Dafeiyu-Mac-Intel-v1.1.2.zip](https://github.com/1281788994-dev/dafeiyu-desktop/releases/download/v1.1.2/Dafeiyu-Mac-Intel-v1.1.2.zip) | 解压，把 App 拖进应用程序后打开 |
 
 当前为测试版：Apple 芯片 Mac 已启动验证，Windows 与 Intel Mac 尚未实机验证。发行包尚无正式发布者签名 / Apple 公证，首次打开可能出现系统安全提示。请确认下载来源，不需要关闭系统安全保护。
 
